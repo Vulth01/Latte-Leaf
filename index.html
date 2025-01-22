@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latte & Leaf</title>
+    <link rel="stylesheet" href="index.css">
+    <!-- Firebase SDKs -->
+    <script src="https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.15.0/firebase-database.js"></script>
+</head>
+<body>
+<header>
+    <div class="title-container">
+        <h1>Latte & Leaf</h1>
+    </div>
+    <p>Enjoy your Latte under the leaves ☕🌿</p>
+</header>
+
+<main>
+    <section id="menu">
+        <h2>Menu</h2>
+        <select id="item-select">
+                <optgroup label="COFFEE">
+                    <option value="16.00">COFFEE - ESPRESSO SINGLE - R 16.00</option>
+                    <option value="18.00">COFFEE - ESPRESSO DOUBLE - R 28.00</option>
+                    <option value="26.00">COFFEE - CAPPUCCINO SINGLE - R 26.00</option>
+                    <option value="29.00">COFFEE - CAPPUCCINO DOUBLE  - R 29.00</option>
+                    <option value="29.00">COFFEE - FLAT WHITE DOUBLE - R 29.00</option>
+                    <option value="29.00">COFFEE - LATTE SINGLE - R 29.00</option>
+                    <option value="20.00">COFFEE - AMERICANO SINGLE - R 20.00</option>
+                    <option value="23.00">COFFEE - AMERICANO DOUBLE - R 23.00</option>
+                    <option value="30.00">COFFEE - CHAI LATTE - R 30.00</option>
+                    <option value="38.00">COFFEE - DIRTY CHAI LATTE - R 38.00</option>
+                    <option value="32.00">COFFEE - MOCHA - R 32.00</option>
+                    <option value="30.00">COFFEE - HOT CHOCOLATE - R 30.00</option>
+                    <option value="08.00">COFFEE - EXTRA SHOT ESPRESSO SINGLE - R 8.00</option>
+                    <option value="10.00">COFFEE - EXTRA SHOT ESPRESSO DOUBLE - R 10.00</option>
+                </optgroup>
+                <optgroup label="TEA">
+                    <option value="15.00">TEA - 5 ROSES TEA - R 15.00</option>
+                    <option value="20.00">TEA - ROOIBOS TEA - R 15.00</option>
+                </optgroup>
+                <optgroup label="COLD DRINK">
+                    <option value="15.00">COLD DRINK - COKE - R 15.00</option>
+                    <option value="15.00">COLD DRINK - COKE ZERO - R 15.00</option>
+                    <option value="15.00">COLD DRINK - SPRITE - R 15.00</option>
+                    <option value="20.00">COLD DRINK - RED BULL - R 20.00</option>
+                    <option value="15.00">COLD DRINK - SWITCH ENERGY - R 15.00</option>
+                    <option value="15.00">COLD DRINK - CAPPY FRUIT JUICE - R 15.00</option>
+                    <option value="10.00">COLD DRINK - WATER STILL/SPARKLING - R 10.00</option>
+                    <option value="20.00">COLD DRINK - MONSTER ENERGY - R 20.00</option>
+                </optgroup>
+                <optgroup label="ICED COFFEE">
+                    <option value="34.00">ICED COFFEE - ICED LATTE - R 34.00</option>
+                    <option value="35.00">ICED COFFEE - ICED MOCHA LATTE - R 35.00</option>
+                    <option value="34.00">ICED COFFEE - FREEZO - R 34.00</option>
+                    <option value="36.00">ICED COFFEE - MOCHA FREEZO - R 36.00</option>
+                    <option value="34.00">ICED COFFEE - CHOCOLATE FREEZO - R 34.00</option>
+                </optgroup>
+                <optgroup label="ICED CRUSHER">
+                    <option value="35.00">ICED CRUSHER - MANGO CRUSHER - R 35.00</option>
+                    <option value="35.00">ICED CRUSHER - PASSION FRUIT CRUSHER - R 35.00</option>
+                    <option value="35.00">ICED CRUSHER - STRAWBERRY CRUSHER - R 35.00</option>
+                </optgroup>
+                <optgroup label="SNACK">
+                    <option value="12.00">SNACK - ASSORTED MUFFINS - R 12.00</option>
+                    <option value="15.00">SNACK - CHOCOLATES - R 15.00</option>
+                    <option value="15.00">SNACK - SWEETS 75G - R 15.00</option>
+                    <option value="20.00">SNACK - SPECKLED EGGS - R 15.00</option>
+                    <option value="10.00">SNACK - DORITOS - R 15.00</option>
+                    <option value="05.00">SNACK - FRITOS - R 15.00</option>
+                    <option value="15.00">SNACK - RASCALS - R 15.00</option>
+                </optgroup>
+                <optgroup label="SPECIAL">
+                    <option value="-2.00">SPECIAL - BUY A COFFEE AND GET A MUFFIN FOR R10 - R -2.00</option>
+                    <option value="-3.00">SPECIAL - BRING YOUR OWN MUG - R -3.00</option>
+                </optgroup>
+            </select>
+
+        <div class="quantity-selector">
+            <label for="select-quantity">Quantity:</label>
+            <input type="number" id="select-quantity" min="1" max="15" value="1">
+        </div>
+
+        <button id="add-to-cart">Add to Cart</button>
+    </section>
+
+    <section id="cart">
+        <h2>Cart</h2>
+        <div class="cart-header">
+            <div class="cart-header-name">Name</div>
+            <div class="cart-header-quantity">Quantity</div>
+            <div class="cart-header-total">Total</div>
+        </div>
+        <ul id="cart-items">
+            <!-- CART ITEMS -->
+        </ul>
+        <p>Total: <span id="cart-total">R 0.00</span></p>
+        <button id="checkout-btn">Checkout</button>
+    </section>
+</main>
+
+<script src="index.js" type="module"></script>
+</body>
+</html>

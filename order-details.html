@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Details - Latte & Leaf</title>
+    <link rel="stylesheet" href="order-details.css">
+    <!-- Add Firebase SDKs -->
+    <script src="https://www.gstatic.com/firebasejs/9.15.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.15.0/firebase-database-compat.js"></script>
+</head>
+<body>
+
+<header>
+    Order Details
+</header>
+
+<main>
+    <section class="order-details">
+        <h3>Order #<span id="order-id"></span></h3>
+        <p><strong>Customer Name:</strong> <span id="customer-name"></span></p>
+        <p><strong>Order Date:</strong> <span id="order-date"></span></p>
+        <p><strong>Milk Option:</strong> <span id="milk-option"></span></p>
+        
+        <h4>Items:</h4>
+        <ul id="order-items"></ul>
+
+        <p><strong>Total:</strong> R <span id="order-total"></span></p>
+
+        <div id="order-status" class="order-status processing">
+            <strong>Status:</strong> <span id="order-status-text">Processing...</span>
+        </div>
+
+        <button onclick="window.location.href='index.html'">Go Back</button>
+    </section>
+</main>
+
+<footer>
+    <p>Thank you for your purchase</p>
+</footer>
+
+<script src="order-details.js"></script>
+</body>
+</html>

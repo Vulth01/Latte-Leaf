@@ -1,0 +1,10 @@
+Scripts:
+
+checkout.html
+checkoutscript.js
+checkoutstyles.css
+firebaseConfig.js
+index.html
+script.js
+styles.css
+users.js

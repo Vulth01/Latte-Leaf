@@ -1,0 +1,110 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #3ab079;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 1.4rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+main {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #3ab079;
+}
+
+.order-details {
+    background-color: rgba(172, 235, 202, 0.9);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.order-details h3 {
+    font-size: 1.8rem;
+    color: #333;
+}
+
+.order-details p {
+    font-size: 1.1rem;
+    margin: 8px 0;
+}
+
+.order-details p strong {
+    font-weight: bold;
+}
+
+.order-status {
+    font-size: 1.2rem;
+    margin-top: 15px;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.processing {
+    background-color: #f3e5f5;
+    color: #9c27b0;
+}
+
+.completed {
+    background-color: #c8e6c9;
+    color: #388e3c;
+}
+
+.cancelled {
+    background-color: #ffcdd2;
+    color: #d32f2f;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    background-color: #3ab079;
+    color: white;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #2e8b57;
+}
+
+button:disabled {
+    background-color: #d3d3d3;
+    cursor: not-allowed;
+}
+
+footer {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 0.9rem;
+    color: #777;
+}
+
+footer a {
+    text-decoration: none;
+    color: #3ab079;
+}

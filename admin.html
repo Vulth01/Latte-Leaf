@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latte & Leaf - Admin</title>
+    <link rel="stylesheet" href="admin.css">
+    <!-- Add Firebase SDKs -->
+    <script src="https://www.gstatic.com/firebasejs/9.15.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.15.0/firebase-database-compat.js"></script>
+</head>
+<body>
+<header>
+    <div class="title-container">
+        <h1>Latte & Leaf - Admin</h1>
+    </div>
+    <p>Enjoy your Latte under the leaves ☕🌿</p>
+</header>
+
+<main>
+    <section id="order-list">
+        <h2>Current Orders:</h2>
+
+        <ul id="orders-list"></ul>
+        <p>Total Orders: <span id="total-orders">0</span></p>
+    </section>
+</main>
+
+<script src="admin.js"></script>
+</body>
+</html>
