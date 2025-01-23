@@ -1,11 +1,12 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-image: url("images/coffee_background_1.jpg");
+    background-size: cover;
+    background-position: center;
     margin: 0;
     padding: 0;
-    color: #333111;
+    color: #333;
 }
-
 /* HEADER TEXT */
 header {
     color: rgba(255, 255, 255, 1); 
