@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Orders - Latte & Leaf</title>
+    <link rel="stylesheet" href="view-orders.css">
+    <!-- Add Firebase SDKs -->
+    <script src="https://www.gstatic.com/firebasejs/9.15.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.15.0/firebase-database-compat.js"></script>
+</head>
+<body>
+<header>
+    <button id="back-btn">Back</button>
+    <div class="title-container">
+        <h1>View Orders</h1>
+    </div>
+</header>
+
+<main>
+    <section id="search-orders">
+        <h2>Search Orders</h2>
+        <label for="customer-name">Enter your name:</label>
+        <input type="text" id="customer-name" name="customer-name" required>
+        <button id="search-btn">Search</button>
+    </section>
+    <section id="order-results">
+        <h2>Your Orders</h2>
+        <ul id="orders-list"></ul>
+    </section>
+</main>
+
+<script src="view-orders.js"></script>
+</body>
+</html>

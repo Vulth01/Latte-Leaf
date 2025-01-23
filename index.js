@@ -22,6 +22,11 @@ if (localStorage.getItem('cart')) {
     displayCart();
 }
 
+
+document.getElementById('view-orders-btn').addEventListener('click', () => {
+    window.location.href = 'view-orders.html';
+});
+
 function getItemName(optionText) {
     const parts = optionText.split(' - ');
     return parts.length > 1 ? parts[1] : optionText;
@@ -217,12 +222,14 @@ checkoutBtn.addEventListener('click', () => {
         return;
     }
 
-    const customerName = prompt("Please enter your name:");
+    let customerName = prompt("Please enter your name:");
 
     if (!customerName) {
         alert('Customer name is required.');
         return;
     }
+
+    customerName = customerName.toLowerCase(); // Convert to lowercase
 
     const totalCost = cartItems.reduce((total, item) => total + (item.price * item.quantity), 0);
 

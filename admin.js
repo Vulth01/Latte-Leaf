@@ -41,11 +41,15 @@ document.addEventListener('DOMContentLoaded', function() {
                 `;
             });
 
+            const orderDate = new Date(order.timestamp);
+            const formattedDate = orderDate.toLocaleDateString();
+            const formattedTime = orderDate.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });    
+
             orderElement.innerHTML = `
                 <h3>Order #${orderKey}</h3>
                 <p><strong>Customer:</strong> ${order.customerName}</p>
                 <div>${orderItemsHTML}</div>
-                <p><strong>Date:</strong> ${order.timestamp}</p>
+                <p><strong>Date:</strong> ${formattedDate} ${formattedTime}</p>
                 <p><strong>Total:</strong> R ${order.totalCost.toFixed(2)}</p>
                 <p><strong>Status:</strong> ${order.status}</p>
                 <div class="order-buttons">

@@ -1,11 +1,12 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-image: url("images/coffee_background_1.jpg");
+    background-size: cover;
+    background-position: center;
     margin: 0;
     padding: 0;
-    color: #333111;
+    color: #333;
 }
-
 /* HEADER TEXT */
 header {
     color: rgba(255, 255, 255, 1); 
@@ -51,6 +52,31 @@ header .title-container::before {
     background: transparent;
     z-index: -1;
 }
+
+#view-orders-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: #3ab085;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#view-orders-btn:hover {
+    background-color: #00cc88;
+}
+
+
+
+
+
+
+
 
 @keyframes moveGradient {
     0% { background-position: 0% center; }
